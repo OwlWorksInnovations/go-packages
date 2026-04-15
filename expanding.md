@@ -22,3 +22,20 @@ Once tagged, anyone can pull it
 ```
 go get github.com/OwlWorksInnovations/go-packages/logger@v1.0.0
 ```
+Then you can simply import it and use it
+```
+package main
+
+import "github.com/OwlWorksInnovations/go-packages/test"
+
+func main() {
+	test.PrintInput("Test worked!")
+}
+
+TERMINAL OUTPUT
+-----------------
+PS C:\Users\user\Documents\Development\Go\test> go run .\test.go
+Test output: Test worked!
+PS C:\Users\user\Documents\Development\Go\test>
+-----------------
+```
