@@ -11,7 +11,7 @@ func CreateConfigPath(configFolder string) {
 		return
 	}
 	configPath := filepath.Join(home, configFolder)
-	os.MkdirAll(filepath.Dir(configPath), 0755)
+	os.MkdirAll(configPath, 0755)
 }
 
 func GetConfigPath(configFolder string) string {
@@ -19,5 +19,5 @@ func GetConfigPath(configFolder string) string {
 	if err != nil {
 		return ""
 	}
-	return home + "/" + configFolder
+	return filepath.Join(home, configFolder)
 }
